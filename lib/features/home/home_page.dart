@@ -6,12 +6,13 @@ import 'package:weather/features/home/city_page.dart';
 import 'package:weather/features/home/cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/model/weather_model.dart';
-import 'package:weather/repositories/weather_repostiories.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key, this.model, this.weatherRepository});
+  const HomePage({
+    super.key,
+    this.model,
+  });
   final WeatherModel? model;
-  final WeatherRepository? weatherRepository;
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +30,20 @@ class HomePage extends StatelessWidget {
       },
       builder: (context, state) {
         if (state.status == Status.loading) {
-          return const Center(
-            child: CircularProgressIndicator(),
+          return Scaffold(
+            body: Container(
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                    Color.fromARGB(255, 73, 224, 248),
+                    Color.fromARGB(255, 5, 10, 155)
+                  ])),
+              child: const Center(
+                child: CircularProgressIndicator(),
+              ),
+            ),
           );
         }
 
@@ -122,7 +135,7 @@ class CityTemperatureWidget extends StatelessWidget {
     return Column(
       children: [
         Text(
-          model.city,
+          model.location.name.toString(),
           style: GoogleFonts.asap(
               fontSize: 20, fontWeight: FontWeight.w400, color: Colors.black),
         ),
@@ -148,7 +161,7 @@ class CityTemperatureWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  model.temperature.toString(),
+                  model.current.temp_c.toString(),
                   style: const TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,

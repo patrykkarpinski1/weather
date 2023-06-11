@@ -1,14 +1,19 @@
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
+import 'package:retrofit/retrofit.dart';
+import 'package:weather/model/weather_model.dart';
 
-class WeatherDataSource {
-  Future<Map<String, dynamic>?> getWeatherData({required String city}) async {
-    try {
-      final response = await Dio().get<Map<String, dynamic>>(
-          'http://api.weatherapi.com/v1/current.json?key=9c246e4146014bb280f160413231006&q=$city&aqi=no');
-      return response.data;
-    } on DioException catch (error) {
-      throw Exception(
-          error.response?.data['error']['message'] ?? 'Unkown error');
-    }
-  }
+part 'weather_data_source.g.dart';
+
+@injectable
+@RestApi()
+abstract class WeatherRemoteRetrofitDataSource {
+  @factoryMethod
+  factory WeatherRemoteRetrofitDataSource(Dio dio) =
+      _WeatherRemoteRetrofitDataSource;
+
+  @GET('current.json?key=9c246e4146014bb280f160413231006&aqi=no')
+  Future<WeatherModel> getWeatherData({
+    @Query('q') String? city,
+  });
 }

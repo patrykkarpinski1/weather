@@ -20,8 +20,8 @@ WeatherModel _$WeatherModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$WeatherModel {
-  double get temperature => throw _privateConstructorUsedError;
-  String get city => throw _privateConstructorUsedError;
+  Location get location => throw _privateConstructorUsedError;
+  Current get current => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,10 @@ abstract class $WeatherModelCopyWith<$Res> {
           WeatherModel value, $Res Function(WeatherModel) then) =
       _$WeatherModelCopyWithImpl<$Res, WeatherModel>;
   @useResult
-  $Res call({double temperature, String city});
+  $Res call({Location location, Current current});
+
+  $LocationCopyWith<$Res> get location;
+  $CurrentCopyWith<$Res> get current;
 }
 
 /// @nodoc
@@ -51,19 +54,35 @@ class _$WeatherModelCopyWithImpl<$Res, $Val extends WeatherModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? temperature = null,
-    Object? city = null,
+    Object? location = null,
+    Object? current = null,
   }) {
     return _then(_value.copyWith(
-      temperature: null == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
-      city: null == city
-          ? _value.city
-          : city // ignore: cast_nullable_to_non_nullable
-              as String,
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Location,
+      current: null == current
+          ? _value.current
+          : current // ignore: cast_nullable_to_non_nullable
+              as Current,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $LocationCopyWith<$Res> get location {
+    return $LocationCopyWith<$Res>(_value.location, (value) {
+      return _then(_value.copyWith(location: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CurrentCopyWith<$Res> get current {
+    return $CurrentCopyWith<$Res>(_value.current, (value) {
+      return _then(_value.copyWith(current: value) as $Val);
+    });
   }
 }
 
@@ -75,7 +94,12 @@ abstract class _$$_WeatherModelCopyWith<$Res>
       __$$_WeatherModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double temperature, String city});
+  $Res call({Location location, Current current});
+
+  @override
+  $LocationCopyWith<$Res> get location;
+  @override
+  $CurrentCopyWith<$Res> get current;
 }
 
 /// @nodoc
@@ -89,18 +113,18 @@ class __$$_WeatherModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? temperature = null,
-    Object? city = null,
+    Object? location = null,
+    Object? current = null,
   }) {
     return _then(_$_WeatherModel(
-      temperature: null == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
-      city: null == city
-          ? _value.city
-          : city // ignore: cast_nullable_to_non_nullable
-              as String,
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Location,
+      current: null == current
+          ? _value.current
+          : current // ignore: cast_nullable_to_non_nullable
+              as Current,
     ));
   }
 }
@@ -108,19 +132,19 @@ class __$$_WeatherModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_WeatherModel implements _WeatherModel {
-  _$_WeatherModel({required this.temperature, required this.city});
+  _$_WeatherModel({required this.location, required this.current});
 
   factory _$_WeatherModel.fromJson(Map<String, dynamic> json) =>
       _$$_WeatherModelFromJson(json);
 
   @override
-  final double temperature;
+  final Location location;
   @override
-  final String city;
+  final Current current;
 
   @override
   String toString() {
-    return 'WeatherModel(temperature: $temperature, city: $city)';
+    return 'WeatherModel(location: $location, current: $current)';
   }
 
   @override
@@ -128,14 +152,14 @@ class _$_WeatherModel implements _WeatherModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_WeatherModel &&
-            (identical(other.temperature, temperature) ||
-                other.temperature == temperature) &&
-            (identical(other.city, city) || other.city == city));
+            (identical(other.location, location) ||
+                other.location == location) &&
+            (identical(other.current, current) || other.current == current));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, temperature, city);
+  int get hashCode => Object.hash(runtimeType, location, current);
 
   @JsonKey(ignore: true)
   @override
@@ -153,18 +177,282 @@ class _$_WeatherModel implements _WeatherModel {
 
 abstract class _WeatherModel implements WeatherModel {
   factory _WeatherModel(
-      {required final double temperature,
-      required final String city}) = _$_WeatherModel;
+      {required final Location location,
+      required final Current current}) = _$_WeatherModel;
 
   factory _WeatherModel.fromJson(Map<String, dynamic> json) =
       _$_WeatherModel.fromJson;
 
   @override
-  double get temperature;
+  Location get location;
   @override
-  String get city;
+  Current get current;
   @override
   @JsonKey(ignore: true)
   _$$_WeatherModelCopyWith<_$_WeatherModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Location _$LocationFromJson(Map<String, dynamic> json) {
+  return _Location.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Location {
+  String get name => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LocationCopyWith<Location> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LocationCopyWith<$Res> {
+  factory $LocationCopyWith(Location value, $Res Function(Location) then) =
+      _$LocationCopyWithImpl<$Res, Location>;
+  @useResult
+  $Res call({String name});
+}
+
+/// @nodoc
+class _$LocationCopyWithImpl<$Res, $Val extends Location>
+    implements $LocationCopyWith<$Res> {
+  _$LocationCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+  }) {
+    return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
+  factory _$$_LocationCopyWith(
+          _$_Location value, $Res Function(_$_Location) then) =
+      __$$_LocationCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String name});
+}
+
+/// @nodoc
+class __$$_LocationCopyWithImpl<$Res>
+    extends _$LocationCopyWithImpl<$Res, _$_Location>
+    implements _$$_LocationCopyWith<$Res> {
+  __$$_LocationCopyWithImpl(
+      _$_Location _value, $Res Function(_$_Location) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+  }) {
+    return _then(_$_Location(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_Location implements _Location {
+  _$_Location({required this.name});
+
+  factory _$_Location.fromJson(Map<String, dynamic> json) =>
+      _$$_LocationFromJson(json);
+
+  @override
+  final String name;
+
+  @override
+  String toString() {
+    return 'Location(name: $name)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Location &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, name);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_LocationCopyWith<_$_Location> get copyWith =>
+      __$$_LocationCopyWithImpl<_$_Location>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LocationToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Location implements Location {
+  factory _Location({required final String name}) = _$_Location;
+
+  factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
+
+  @override
+  String get name;
+  @override
+  @JsonKey(ignore: true)
+  _$$_LocationCopyWith<_$_Location> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Current _$CurrentFromJson(Map<String, dynamic> json) {
+  return _Current.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Current {
+  double get temp_c => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CurrentCopyWith<Current> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CurrentCopyWith<$Res> {
+  factory $CurrentCopyWith(Current value, $Res Function(Current) then) =
+      _$CurrentCopyWithImpl<$Res, Current>;
+  @useResult
+  $Res call({double temp_c});
+}
+
+/// @nodoc
+class _$CurrentCopyWithImpl<$Res, $Val extends Current>
+    implements $CurrentCopyWith<$Res> {
+  _$CurrentCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? temp_c = null,
+  }) {
+    return _then(_value.copyWith(
+      temp_c: null == temp_c
+          ? _value.temp_c
+          : temp_c // ignore: cast_nullable_to_non_nullable
+              as double,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_CurrentCopyWith<$Res> implements $CurrentCopyWith<$Res> {
+  factory _$$_CurrentCopyWith(
+          _$_Current value, $Res Function(_$_Current) then) =
+      __$$_CurrentCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double temp_c});
+}
+
+/// @nodoc
+class __$$_CurrentCopyWithImpl<$Res>
+    extends _$CurrentCopyWithImpl<$Res, _$_Current>
+    implements _$$_CurrentCopyWith<$Res> {
+  __$$_CurrentCopyWithImpl(_$_Current _value, $Res Function(_$_Current) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? temp_c = null,
+  }) {
+    return _then(_$_Current(
+      temp_c: null == temp_c
+          ? _value.temp_c
+          : temp_c // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_Current implements _Current {
+  _$_Current({required this.temp_c});
+
+  factory _$_Current.fromJson(Map<String, dynamic> json) =>
+      _$$_CurrentFromJson(json);
+
+  @override
+  final double temp_c;
+
+  @override
+  String toString() {
+    return 'Current(temp_c: $temp_c)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Current &&
+            (identical(other.temp_c, temp_c) || other.temp_c == temp_c));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, temp_c);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CurrentCopyWith<_$_Current> get copyWith =>
+      __$$_CurrentCopyWithImpl<_$_Current>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CurrentToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Current implements Current {
+  factory _Current({required final double temp_c}) = _$_Current;
+
+  factory _Current.fromJson(Map<String, dynamic> json) = _$_Current.fromJson;
+
+  @override
+  double get temp_c;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CurrentCopyWith<_$_Current> get copyWith =>
       throw _privateConstructorUsedError;
 }
