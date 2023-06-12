@@ -200,6 +200,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Location {
   String get name => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -212,7 +213,7 @@ abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res, Location>;
   @useResult
-  $Res call({String name});
+  $Res call({String name, String country});
 }
 
 /// @nodoc
@@ -229,11 +230,16 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
   @override
   $Res call({
     Object? name = null,
+    Object? country = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      country: null == country
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -246,7 +252,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       __$$_LocationCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name});
+  $Res call({String name, String country});
 }
 
 /// @nodoc
@@ -261,11 +267,16 @@ class __$$_LocationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
+    Object? country = null,
   }) {
     return _then(_$_Location(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      country: null == country
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -274,17 +285,19 @@ class __$$_LocationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Location implements _Location {
-  _$_Location({required this.name});
+  _$_Location({required this.name, required this.country});
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$$_LocationFromJson(json);
 
   @override
   final String name;
+  @override
+  final String country;
 
   @override
   String toString() {
-    return 'Location(name: $name)';
+    return 'Location(name: $name, country: $country)';
   }
 
   @override
@@ -292,12 +305,13 @@ class _$_Location implements _Location {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Location &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.country, country) || other.country == country));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name);
+  int get hashCode => Object.hash(runtimeType, name, country);
 
   @JsonKey(ignore: true)
   @override
@@ -314,12 +328,16 @@ class _$_Location implements _Location {
 }
 
 abstract class _Location implements Location {
-  factory _Location({required final String name}) = _$_Location;
+  factory _Location(
+      {required final String name,
+      required final String country}) = _$_Location;
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
   @override
   String get name;
+  @override
+  String get country;
   @override
   @JsonKey(ignore: true)
   _$$_LocationCopyWith<_$_Location> get copyWith =>
@@ -333,6 +351,15 @@ Current _$CurrentFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Current {
   double get temp_c => throw _privateConstructorUsedError;
+  double get wind_kph => throw _privateConstructorUsedError;
+  double get feelslike_c => throw _privateConstructorUsedError;
+  double get gust_kph => throw _privateConstructorUsedError;
+  int get cloud => throw _privateConstructorUsedError;
+  double get pressure_mb => throw _privateConstructorUsedError;
+  double get precip_mm => throw _privateConstructorUsedError;
+  double get humidity => throw _privateConstructorUsedError;
+  String get wind_dir => throw _privateConstructorUsedError;
+  Condition get condition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -344,7 +371,19 @@ abstract class $CurrentCopyWith<$Res> {
   factory $CurrentCopyWith(Current value, $Res Function(Current) then) =
       _$CurrentCopyWithImpl<$Res, Current>;
   @useResult
-  $Res call({double temp_c});
+  $Res call(
+      {double temp_c,
+      double wind_kph,
+      double feelslike_c,
+      double gust_kph,
+      int cloud,
+      double pressure_mb,
+      double precip_mm,
+      double humidity,
+      String wind_dir,
+      Condition condition});
+
+  $ConditionCopyWith<$Res> get condition;
 }
 
 /// @nodoc
@@ -361,13 +400,66 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
   @override
   $Res call({
     Object? temp_c = null,
+    Object? wind_kph = null,
+    Object? feelslike_c = null,
+    Object? gust_kph = null,
+    Object? cloud = null,
+    Object? pressure_mb = null,
+    Object? precip_mm = null,
+    Object? humidity = null,
+    Object? wind_dir = null,
+    Object? condition = null,
   }) {
     return _then(_value.copyWith(
       temp_c: null == temp_c
           ? _value.temp_c
           : temp_c // ignore: cast_nullable_to_non_nullable
               as double,
+      wind_kph: null == wind_kph
+          ? _value.wind_kph
+          : wind_kph // ignore: cast_nullable_to_non_nullable
+              as double,
+      feelslike_c: null == feelslike_c
+          ? _value.feelslike_c
+          : feelslike_c // ignore: cast_nullable_to_non_nullable
+              as double,
+      gust_kph: null == gust_kph
+          ? _value.gust_kph
+          : gust_kph // ignore: cast_nullable_to_non_nullable
+              as double,
+      cloud: null == cloud
+          ? _value.cloud
+          : cloud // ignore: cast_nullable_to_non_nullable
+              as int,
+      pressure_mb: null == pressure_mb
+          ? _value.pressure_mb
+          : pressure_mb // ignore: cast_nullable_to_non_nullable
+              as double,
+      precip_mm: null == precip_mm
+          ? _value.precip_mm
+          : precip_mm // ignore: cast_nullable_to_non_nullable
+              as double,
+      humidity: null == humidity
+          ? _value.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as double,
+      wind_dir: null == wind_dir
+          ? _value.wind_dir
+          : wind_dir // ignore: cast_nullable_to_non_nullable
+              as String,
+      condition: null == condition
+          ? _value.condition
+          : condition // ignore: cast_nullable_to_non_nullable
+              as Condition,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ConditionCopyWith<$Res> get condition {
+    return $ConditionCopyWith<$Res>(_value.condition, (value) {
+      return _then(_value.copyWith(condition: value) as $Val);
+    });
   }
 }
 
@@ -378,7 +470,20 @@ abstract class _$$_CurrentCopyWith<$Res> implements $CurrentCopyWith<$Res> {
       __$$_CurrentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double temp_c});
+  $Res call(
+      {double temp_c,
+      double wind_kph,
+      double feelslike_c,
+      double gust_kph,
+      int cloud,
+      double pressure_mb,
+      double precip_mm,
+      double humidity,
+      String wind_dir,
+      Condition condition});
+
+  @override
+  $ConditionCopyWith<$Res> get condition;
 }
 
 /// @nodoc
@@ -392,12 +497,57 @@ class __$$_CurrentCopyWithImpl<$Res>
   @override
   $Res call({
     Object? temp_c = null,
+    Object? wind_kph = null,
+    Object? feelslike_c = null,
+    Object? gust_kph = null,
+    Object? cloud = null,
+    Object? pressure_mb = null,
+    Object? precip_mm = null,
+    Object? humidity = null,
+    Object? wind_dir = null,
+    Object? condition = null,
   }) {
     return _then(_$_Current(
       temp_c: null == temp_c
           ? _value.temp_c
           : temp_c // ignore: cast_nullable_to_non_nullable
               as double,
+      wind_kph: null == wind_kph
+          ? _value.wind_kph
+          : wind_kph // ignore: cast_nullable_to_non_nullable
+              as double,
+      feelslike_c: null == feelslike_c
+          ? _value.feelslike_c
+          : feelslike_c // ignore: cast_nullable_to_non_nullable
+              as double,
+      gust_kph: null == gust_kph
+          ? _value.gust_kph
+          : gust_kph // ignore: cast_nullable_to_non_nullable
+              as double,
+      cloud: null == cloud
+          ? _value.cloud
+          : cloud // ignore: cast_nullable_to_non_nullable
+              as int,
+      pressure_mb: null == pressure_mb
+          ? _value.pressure_mb
+          : pressure_mb // ignore: cast_nullable_to_non_nullable
+              as double,
+      precip_mm: null == precip_mm
+          ? _value.precip_mm
+          : precip_mm // ignore: cast_nullable_to_non_nullable
+              as double,
+      humidity: null == humidity
+          ? _value.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as double,
+      wind_dir: null == wind_dir
+          ? _value.wind_dir
+          : wind_dir // ignore: cast_nullable_to_non_nullable
+              as String,
+      condition: null == condition
+          ? _value.condition
+          : condition // ignore: cast_nullable_to_non_nullable
+              as Condition,
     ));
   }
 }
@@ -405,17 +555,45 @@ class __$$_CurrentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Current implements _Current {
-  _$_Current({required this.temp_c});
+  _$_Current(
+      {required this.temp_c,
+      required this.wind_kph,
+      required this.feelslike_c,
+      required this.gust_kph,
+      required this.cloud,
+      required this.pressure_mb,
+      required this.precip_mm,
+      required this.humidity,
+      required this.wind_dir,
+      required this.condition});
 
   factory _$_Current.fromJson(Map<String, dynamic> json) =>
       _$$_CurrentFromJson(json);
 
   @override
   final double temp_c;
+  @override
+  final double wind_kph;
+  @override
+  final double feelslike_c;
+  @override
+  final double gust_kph;
+  @override
+  final int cloud;
+  @override
+  final double pressure_mb;
+  @override
+  final double precip_mm;
+  @override
+  final double humidity;
+  @override
+  final String wind_dir;
+  @override
+  final Condition condition;
 
   @override
   String toString() {
-    return 'Current(temp_c: $temp_c)';
+    return 'Current(temp_c: $temp_c, wind_kph: $wind_kph, feelslike_c: $feelslike_c, gust_kph: $gust_kph, cloud: $cloud, pressure_mb: $pressure_mb, precip_mm: $precip_mm, humidity: $humidity, wind_dir: $wind_dir, condition: $condition)';
   }
 
   @override
@@ -423,12 +601,30 @@ class _$_Current implements _Current {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Current &&
-            (identical(other.temp_c, temp_c) || other.temp_c == temp_c));
+            (identical(other.temp_c, temp_c) || other.temp_c == temp_c) &&
+            (identical(other.wind_kph, wind_kph) ||
+                other.wind_kph == wind_kph) &&
+            (identical(other.feelslike_c, feelslike_c) ||
+                other.feelslike_c == feelslike_c) &&
+            (identical(other.gust_kph, gust_kph) ||
+                other.gust_kph == gust_kph) &&
+            (identical(other.cloud, cloud) || other.cloud == cloud) &&
+            (identical(other.pressure_mb, pressure_mb) ||
+                other.pressure_mb == pressure_mb) &&
+            (identical(other.precip_mm, precip_mm) ||
+                other.precip_mm == precip_mm) &&
+            (identical(other.humidity, humidity) ||
+                other.humidity == humidity) &&
+            (identical(other.wind_dir, wind_dir) ||
+                other.wind_dir == wind_dir) &&
+            (identical(other.condition, condition) ||
+                other.condition == condition));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, temp_c);
+  int get hashCode => Object.hash(runtimeType, temp_c, wind_kph, feelslike_c,
+      gust_kph, cloud, pressure_mb, precip_mm, humidity, wind_dir, condition);
 
   @JsonKey(ignore: true)
   @override
@@ -445,14 +641,176 @@ class _$_Current implements _Current {
 }
 
 abstract class _Current implements Current {
-  factory _Current({required final double temp_c}) = _$_Current;
+  factory _Current(
+      {required final double temp_c,
+      required final double wind_kph,
+      required final double feelslike_c,
+      required final double gust_kph,
+      required final int cloud,
+      required final double pressure_mb,
+      required final double precip_mm,
+      required final double humidity,
+      required final String wind_dir,
+      required final Condition condition}) = _$_Current;
 
   factory _Current.fromJson(Map<String, dynamic> json) = _$_Current.fromJson;
 
   @override
   double get temp_c;
   @override
+  double get wind_kph;
+  @override
+  double get feelslike_c;
+  @override
+  double get gust_kph;
+  @override
+  int get cloud;
+  @override
+  double get pressure_mb;
+  @override
+  double get precip_mm;
+  @override
+  double get humidity;
+  @override
+  String get wind_dir;
+  @override
+  Condition get condition;
+  @override
   @JsonKey(ignore: true)
   _$$_CurrentCopyWith<_$_Current> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Condition _$ConditionFromJson(Map<String, dynamic> json) {
+  return _Condition.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Condition {
+  String get text => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ConditionCopyWith<Condition> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConditionCopyWith<$Res> {
+  factory $ConditionCopyWith(Condition value, $Res Function(Condition) then) =
+      _$ConditionCopyWithImpl<$Res, Condition>;
+  @useResult
+  $Res call({String text});
+}
+
+/// @nodoc
+class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
+    implements $ConditionCopyWith<$Res> {
+  _$ConditionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? text = null,
+  }) {
+    return _then(_value.copyWith(
+      text: null == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
+  factory _$$_ConditionCopyWith(
+          _$_Condition value, $Res Function(_$_Condition) then) =
+      __$$_ConditionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String text});
+}
+
+/// @nodoc
+class __$$_ConditionCopyWithImpl<$Res>
+    extends _$ConditionCopyWithImpl<$Res, _$_Condition>
+    implements _$$_ConditionCopyWith<$Res> {
+  __$$_ConditionCopyWithImpl(
+      _$_Condition _value, $Res Function(_$_Condition) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? text = null,
+  }) {
+    return _then(_$_Condition(
+      text: null == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_Condition implements _Condition {
+  _$_Condition({required this.text});
+
+  factory _$_Condition.fromJson(Map<String, dynamic> json) =>
+      _$$_ConditionFromJson(json);
+
+  @override
+  final String text;
+
+  @override
+  String toString() {
+    return 'Condition(text: $text)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Condition &&
+            (identical(other.text, text) || other.text == text));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, text);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConditionCopyWith<_$_Condition> get copyWith =>
+      __$$_ConditionCopyWithImpl<_$_Condition>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ConditionToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Condition implements Condition {
+  factory _Condition({required final String text}) = _$_Condition;
+
+  factory _Condition.fromJson(Map<String, dynamic> json) =
+      _$_Condition.fromJson;
+
+  @override
+  String get text;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ConditionCopyWith<_$_Condition> get copyWith =>
       throw _privateConstructorUsedError;
 }

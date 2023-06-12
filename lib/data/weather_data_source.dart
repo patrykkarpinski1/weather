@@ -12,7 +12,8 @@ abstract class WeatherRemoteRetrofitDataSource {
   factory WeatherRemoteRetrofitDataSource(Dio dio) =
       _WeatherRemoteRetrofitDataSource;
 
-  @GET('current.json?key=9c246e4146014bb280f160413231006&aqi=no')
+  @GET(
+      'forecast.json?key=9c246e4146014bb280f160413231006&days=3&aqi=yes&alerts=no')
   Future<WeatherModel> getWeatherData({
     @Query('q') String? city,
   });

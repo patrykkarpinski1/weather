@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:weather/app/core/enums.dart';
-import 'package:weather/features/home/city_page.dart';
+import 'package:weather/features/widgets/actual_weather_widget.dart';
+import 'package:weather/features/home/pages/city_page.dart';
 import 'package:weather/features/home/cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather/features/widgets/city_temperature_widget.dart';
+import 'package:weather/features/widgets/navigation_weather_widget.dart';
 import 'package:weather/model/weather_model.dart';
 
 class HomePage extends StatelessWidget {
@@ -59,11 +62,8 @@ class HomePage extends StatelessWidget {
                   Color.fromARGB(255, 73, 224, 248),
                   Color.fromARGB(255, 5, 10, 155)
                 ])),
-            child: Column(
+            child: ListView(
               children: [
-                const SizedBox(
-                  height: 50,
-                ),
                 Center(
                     child: Container(
                   decoration: const BoxDecoration(
@@ -74,13 +74,24 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          'City',
-                          style: GoogleFonts.asap(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black),
-                        ),
+                        if (weatherModel == null) ...[
+                          Text(
+                            'City',
+                            style: GoogleFonts.asap(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black),
+                          ),
+                        ],
+                        if (weatherModel != null) ...[
+                          Text(
+                            weatherModel.location.name,
+                            style: GoogleFonts.asap(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black),
+                          ),
+                        ],
                         Icon(
                           MdiIcons.menuDown,
                           color: Colors.black,
@@ -110,72 +121,47 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 80,
                 ),
-                if (weatherModel != null)
+                if (weatherModel != null) ...[
                   CityTemperatureWidget(
                     model: weatherModel,
                   ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  NavigationWeatherWidget(model: weatherModel),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                        height: 60,
+                        width: 80,
+                        child: Divider(
+                          thickness: 2,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Text(
+                        '  Actual Weather  ',
+                        style:
+                            GoogleFonts.asap(fontSize: 24, color: Colors.black),
+                      ),
+                      const SizedBox(
+                        height: 60,
+                        width: 80,
+                        child: Divider(
+                          thickness: 2,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                  ActualWeatherWidget(model: weatherModel),
+                ],
               ],
             ),
           ),
         );
       },
-    );
-  }
-}
-
-class CityTemperatureWidget extends StatelessWidget {
-  const CityTemperatureWidget({
-    required this.model,
-    Key? key,
-  }) : super(key: key);
-  final WeatherModel model;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          model.location.name.toString(),
-          style: GoogleFonts.asap(
-              fontSize: 20, fontWeight: FontWeight.w400, color: Colors.black),
-        ),
-        const SizedBox(
-          height: 35,
-        ),
-        Container(
-          width: 250,
-          height: 250,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.centerRight,
-                colors: [
-                  Color.fromARGB(255, 138, 223, 236),
-                  Color.fromARGB(241, 21, 120, 201)
-                ]),
-            shape: BoxShape.circle,
-            color: Colors.white,
-          ),
-          child: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  model.current.temp_c.toString(),
-                  style: const TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Icon(
-                  MdiIcons.temperatureCelsius,
-                  size: 32,
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
     );
   }
 }

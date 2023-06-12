@@ -34,7 +34,7 @@ class _WeatherRemoteRetrofitDataSource
     )
             .compose(
               _dio.options,
-              'current.json?key=9c246e4146014bb280f160413231006&aqi=no',
+              'forecast.json?key=9c246e4146014bb280f160413231006&days=3&aqi=yes&alerts=no',
               queryParameters: queryParameters,
               data: _data,
             )

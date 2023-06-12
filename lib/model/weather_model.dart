@@ -17,8 +17,8 @@ class WeatherModel with _$WeatherModel {
 class Location with _$Location {
   factory Location({
     required String name,
+    required String country,
   }) = _Location;
-
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
 }
@@ -27,8 +27,27 @@ class Location with _$Location {
 class Current with _$Current {
   factory Current({
     required double temp_c,
+    required double wind_kph,
+    required double feelslike_c,
+    required double gust_kph,
+    required int cloud,
+    required double pressure_mb,
+    required double precip_mm,
+    required double humidity,
+    required String wind_dir,
+    required Condition condition,
   }) = _Current;
 
   factory Current.fromJson(Map<String, dynamic> json) =>
       _$CurrentFromJson(json);
+}
+
+@freezed
+class Condition with _$Condition {
+  factory Condition({
+    required String text,
+  }) = _Condition;
+
+  factory Condition.fromJson(Map<String, dynamic> json) =>
+      _$ConditionFromJson(json);
 }

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/app/core/config.dart';
 import 'package:weather/app/injection_container.dart';
 import 'package:weather/features/home/cubit/home_cubit.dart';
-import 'package:weather/features/home/home_page.dart';
+import 'package:weather/features/home/pages/home_page.dart';
 import 'package:weather/model/weather_model.dart';
 
 class MyApp extends StatelessWidget {
