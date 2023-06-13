@@ -32,54 +32,53 @@ class ActualWeatherWidget extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(
-                    model.current.wind_dir,
-                  ),
+                  Text(model.current.wind_dir,
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
                   const Text('  '),
-                  Text(
-                    model.current.wind_kph.toString(),
-                  ),
-                  const Text(' kph'),
+                  Text(model.current.wind_kph.toString(),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const Text(' kph',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
               Row(
                 children: [
-                  Text(
-                    model.current.gust_kph.toString(),
-                  ),
-                  const Text(' kph'),
+                  Text(model.current.gust_kph.toString(),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const Text(' kph',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
               Row(
                 children: [
-                  Text(
-                    model.current.cloud.toString(),
-                  ),
-                  const Text(' %'),
+                  Text(model.current.cloud.toString(),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const Text(' %',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
               Row(
                 children: [
-                  Text(
-                    model.current.precip_mm.toString(),
-                  ),
-                  const Text(' mm'),
+                  Text(model.current.precip_mm.toString(),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const Text(' mm',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
               Row(
                 children: [
-                  Text(
-                    model.current.humidity.toString(),
-                  ),
-                  const Text(' %'),
+                  Text(model.current.humidity.toString(),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const Text(' %',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
               Row(
                 children: [
-                  Text(
-                    model.current.pressure_mb.toString(),
-                  ),
-                  const Text(' mb'),
+                  Text(model.current.pressure_mb.toString(),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const Text(' mb',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
             ],

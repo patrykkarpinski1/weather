@@ -6,7 +6,7 @@ import 'package:weather/model/weather_model.dart';
 
 class NavigationWeatherWidget extends StatelessWidget {
   const NavigationWeatherWidget({super.key, required this.model});
-  final WeatherModel? model;
+  final WeatherModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +29,15 @@ class NavigationWeatherWidget extends StatelessWidget {
                 onTap: () {
                   Navigator.of(
                     context,
-                  ).push(MaterialPageRoute(builder: (_) => DayWeatherPage()));
+                  ).push(MaterialPageRoute(
+                      builder: (_) => DayWeatherPage(
+                            model: model,
+                          )));
                 },
                 child: Column(
                   children: const [
-                    Text('Day weather'),
+                    Text('Day weather',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                     SizedBox(
                       height: 5,
                     ),
@@ -60,11 +64,14 @@ class NavigationWeatherWidget extends StatelessWidget {
                   Navigator.of(
                     context,
                   ).push(MaterialPageRoute(
-                      builder: (_) => EveryHourWeatherPage()));
+                      builder: (_) => EveryHourWeatherPage(
+                            model: model,
+                          )));
                 },
                 child: Column(
                   children: const [
-                    Text('Every hour'),
+                    Text('Every hour',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                     SizedBox(
                       height: 5,
                     ),
@@ -91,11 +98,14 @@ class NavigationWeatherWidget extends StatelessWidget {
                   Navigator.of(
                     context,
                   ).push(MaterialPageRoute(
-                      builder: (_) => ThreeDaysWeatherPage()));
+                      builder: (_) => ThreeDaysWeatherPage(
+                            model: model,
+                          )));
                 },
                 child: Column(
                   children: const [
-                    Text('For three days'),
+                    Text('For three days',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                     SizedBox(
                       height: 5,
                     ),

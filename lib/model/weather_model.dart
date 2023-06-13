@@ -7,6 +7,7 @@ class WeatherModel with _$WeatherModel {
   factory WeatherModel({
     required Location location,
     required Current current,
+    required Forecast forecast,
   }) = _WeatherModel;
 
   factory WeatherModel.fromJson(Map<String, dynamic> json) =>
@@ -18,6 +19,7 @@ class Location with _$Location {
   factory Location({
     required String name,
     required String country,
+    required String localtime,
   }) = _Location;
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
@@ -50,4 +52,68 @@ class Condition with _$Condition {
 
   factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
+}
+
+@freezed
+class Forecast with _$Forecast {
+  factory Forecast({
+    required List<Forecastday> forecastday,
+  }) = _Forecast;
+
+  factory Forecast.fromJson(Map<String, dynamic> json) =>
+      _$ForecastFromJson(json);
+}
+
+@freezed
+class Forecastday with _$Forecastday {
+  factory Forecastday({
+    required String date,
+    required Day day,
+    required Astro astro,
+    required List<Hour> hour,
+  }) = _Forecastday;
+
+  factory Forecastday.fromJson(Map<String, dynamic> json) =>
+      _$ForecastdayFromJson(json);
+}
+
+@freezed
+class Day with _$Day {
+  factory Day({
+    required double maxtemp_c,
+    required double mintemp_c,
+    required double maxwind_kph,
+    required double totalprecip_mm,
+    required double totalsnow_cm,
+    required double avghumidity,
+    required double daily_chance_of_rain,
+    required double daily_chance_of_snow,
+    required double avgvis_km,
+    required Condition condition,
+  }) = _Day;
+
+  factory Day.fromJson(Map<String, dynamic> json) => _$DayFromJson(json);
+}
+
+@freezed
+class Astro with _$Astro {
+  factory Astro({
+    required String sunrise,
+    required String sunset,
+    required String moonrise,
+    required String moonset,
+  }) = _Astro;
+
+  factory Astro.fromJson(Map<String, dynamic> json) => _$AstroFromJson(json);
+}
+
+@freezed
+class Hour with _$Hour {
+  factory Hour({
+    required double temp_c,
+    required String time,
+    required Condition condition,
+  }) = _Hour;
+
+  factory Hour.fromJson(Map<String, dynamic> json) => _$HourFromJson(json);
 }

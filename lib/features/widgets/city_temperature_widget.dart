@@ -21,24 +21,29 @@ class CityTemperatureWidget extends StatelessWidget {
               model.location.name,
               style: GoogleFonts.asap(
                   fontSize: 20,
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
             Text(
               ',',
               style: GoogleFonts.asap(
                   fontSize: 20,
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
             Text(
               model.location.country,
               style: GoogleFonts.asap(
                   fontSize: 20,
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
           ],
+        ),
+        Text(
+          model.location.localtime,
+          style: GoogleFonts.asap(
+              fontSize: 12, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         const SizedBox(
           height: 35,
