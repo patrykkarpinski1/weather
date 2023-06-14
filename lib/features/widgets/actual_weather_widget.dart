@@ -32,10 +32,10 @@ class ActualWeatherWidget extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(model.current.wind_dir,
+                  Text(model.current.windDir,
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   const Text('  '),
-                  Text(model.current.wind_kph.toString(),
+                  Text(model.current.windKph.toString(),
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   const Text(' kph',
                       style: TextStyle(fontWeight: FontWeight.bold)),
@@ -43,7 +43,7 @@ class ActualWeatherWidget extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text(model.current.gust_kph.toString(),
+                  Text(model.current.gustKph.toString(),
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   const Text(' kph',
                       style: TextStyle(fontWeight: FontWeight.bold)),
@@ -59,7 +59,7 @@ class ActualWeatherWidget extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text(model.current.precip_mm.toString(),
+                  Text(model.current.precipMm.toString(),
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   const Text(' mm',
                       style: TextStyle(fontWeight: FontWeight.bold)),
@@ -75,7 +75,7 @@ class ActualWeatherWidget extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text(model.current.pressure_mb.toString(),
+                  Text(model.current.pressureMb.toString(),
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   const Text(' mb',
                       style: TextStyle(fontWeight: FontWeight.bold)),

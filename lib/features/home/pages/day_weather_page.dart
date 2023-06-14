@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:weather/features/widgets/generete_row_widget.dart';
 import 'package:weather/model/weather_model.dart';
 
 class DayWeatherPage extends StatelessWidget {
@@ -9,7 +11,11 @@ class DayWeatherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(model.forecast.forecastday[0].date),
+        title: Text(
+          DateFormat('yyyy-MM-dd')
+              .format(model.forecast.forecastday[0].date)
+              .toString(),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -23,7 +29,7 @@ class DayWeatherPage extends StatelessWidget {
                     image: AssetImage('images/sun.png'),
                   ),
                   Text(
-                    model.forecast.forecastday[0].day.maxtemp_c.toString(),
+                    model.forecast.forecastday[0].day.maxtempC.toString(),
                     style: const TextStyle(
                       fontSize: 62,
                       fontWeight: FontWeight.bold,
@@ -63,29 +69,27 @@ class DayWeatherPage extends StatelessWidget {
               child: Column(
                 children: [
                   generateRow('Min. Temp C',
-                      model.forecast.forecastday[0].day.mintemp_c.toString()),
+                      model.forecast.forecastday[0].day.mintempC.toString()),
                   generateRow('Max. Wind Kph',
-                      model.forecast.forecastday[0].day.maxwind_kph.toString()),
+                      model.forecast.forecastday[0].day.maxwindKph.toString()),
                   generateRow(
                       'Total Precip mm',
-                      model.forecast.forecastday[0].day.totalprecip_mm
+                      model.forecast.forecastday[0].day.totalprecipMm
                           .toString()),
-                  generateRow(
-                      'Total Snow cm',
-                      model.forecast.forecastday[0].day.totalsnow_cm
-                          .toString()),
+                  generateRow('Total Snow cm',
+                      model.forecast.forecastday[0].day.totalsnowCm.toString()),
                   generateRow('Avg Humidity %',
                       model.forecast.forecastday[0].day.avghumidity.toString()),
                   generateRow(
                       'Daily Chance of Rain %',
-                      model.forecast.forecastday[0].day.daily_chance_of_rain
+                      model.forecast.forecastday[0].day.dailyChanceOfRain
                           .toString()),
                   generateRow(
                       'Daily Chance of Snow %',
-                      model.forecast.forecastday[0].day.daily_chance_of_snow
+                      model.forecast.forecastday[0].day.dailyChanceOfSnow
                           .toString()),
                   generateRow('Avg Vis km',
-                      model.forecast.forecastday[0].day.avgvis_km.toString()),
+                      model.forecast.forecastday[0].day.avgvisKm.toString()),
                 ],
               ),
             ),
@@ -161,30 +165,4 @@ class DayWeatherPage extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget generateRow(String title, String value) {
-  return Column(
-    children: [
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: Text(title, textAlign: TextAlign.left),
-            ),
-            Expanded(
-              child: Text(value,
-                  textAlign: TextAlign.right,
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-            ),
-          ],
-        ),
-      ),
-      const Divider(
-        color: Colors.black,
-      ),
-    ],
-  );
 }

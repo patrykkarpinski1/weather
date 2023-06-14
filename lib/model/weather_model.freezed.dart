@@ -399,15 +399,15 @@ Current _$CurrentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Current {
-  double get temp_c => throw _privateConstructorUsedError;
-  double get wind_kph => throw _privateConstructorUsedError;
-  double get feelslike_c => throw _privateConstructorUsedError;
-  double get gust_kph => throw _privateConstructorUsedError;
+  double get tempC => throw _privateConstructorUsedError;
+  double get windKph => throw _privateConstructorUsedError;
+  double get feelslikeC => throw _privateConstructorUsedError;
+  double get gustKph => throw _privateConstructorUsedError;
   int get cloud => throw _privateConstructorUsedError;
-  double get pressure_mb => throw _privateConstructorUsedError;
-  double get precip_mm => throw _privateConstructorUsedError;
+  double get pressureMb => throw _privateConstructorUsedError;
+  double get precipMm => throw _privateConstructorUsedError;
   double get humidity => throw _privateConstructorUsedError;
-  String get wind_dir => throw _privateConstructorUsedError;
+  String get windDir => throw _privateConstructorUsedError;
   Condition get condition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -421,15 +421,15 @@ abstract class $CurrentCopyWith<$Res> {
       _$CurrentCopyWithImpl<$Res, Current>;
   @useResult
   $Res call(
-      {double temp_c,
-      double wind_kph,
-      double feelslike_c,
-      double gust_kph,
+      {double tempC,
+      double windKph,
+      double feelslikeC,
+      double gustKph,
       int cloud,
-      double pressure_mb,
-      double precip_mm,
+      double pressureMb,
+      double precipMm,
       double humidity,
-      String wind_dir,
+      String windDir,
       Condition condition});
 
   $ConditionCopyWith<$Res> get condition;
@@ -448,53 +448,53 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? temp_c = null,
-    Object? wind_kph = null,
-    Object? feelslike_c = null,
-    Object? gust_kph = null,
+    Object? tempC = null,
+    Object? windKph = null,
+    Object? feelslikeC = null,
+    Object? gustKph = null,
     Object? cloud = null,
-    Object? pressure_mb = null,
-    Object? precip_mm = null,
+    Object? pressureMb = null,
+    Object? precipMm = null,
     Object? humidity = null,
-    Object? wind_dir = null,
+    Object? windDir = null,
     Object? condition = null,
   }) {
     return _then(_value.copyWith(
-      temp_c: null == temp_c
-          ? _value.temp_c
-          : temp_c // ignore: cast_nullable_to_non_nullable
+      tempC: null == tempC
+          ? _value.tempC
+          : tempC // ignore: cast_nullable_to_non_nullable
               as double,
-      wind_kph: null == wind_kph
-          ? _value.wind_kph
-          : wind_kph // ignore: cast_nullable_to_non_nullable
+      windKph: null == windKph
+          ? _value.windKph
+          : windKph // ignore: cast_nullable_to_non_nullable
               as double,
-      feelslike_c: null == feelslike_c
-          ? _value.feelslike_c
-          : feelslike_c // ignore: cast_nullable_to_non_nullable
+      feelslikeC: null == feelslikeC
+          ? _value.feelslikeC
+          : feelslikeC // ignore: cast_nullable_to_non_nullable
               as double,
-      gust_kph: null == gust_kph
-          ? _value.gust_kph
-          : gust_kph // ignore: cast_nullable_to_non_nullable
+      gustKph: null == gustKph
+          ? _value.gustKph
+          : gustKph // ignore: cast_nullable_to_non_nullable
               as double,
       cloud: null == cloud
           ? _value.cloud
           : cloud // ignore: cast_nullable_to_non_nullable
               as int,
-      pressure_mb: null == pressure_mb
-          ? _value.pressure_mb
-          : pressure_mb // ignore: cast_nullable_to_non_nullable
+      pressureMb: null == pressureMb
+          ? _value.pressureMb
+          : pressureMb // ignore: cast_nullable_to_non_nullable
               as double,
-      precip_mm: null == precip_mm
-          ? _value.precip_mm
-          : precip_mm // ignore: cast_nullable_to_non_nullable
+      precipMm: null == precipMm
+          ? _value.precipMm
+          : precipMm // ignore: cast_nullable_to_non_nullable
               as double,
       humidity: null == humidity
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
               as double,
-      wind_dir: null == wind_dir
-          ? _value.wind_dir
-          : wind_dir // ignore: cast_nullable_to_non_nullable
+      windDir: null == windDir
+          ? _value.windDir
+          : windDir // ignore: cast_nullable_to_non_nullable
               as String,
       condition: null == condition
           ? _value.condition
@@ -520,15 +520,15 @@ abstract class _$$_CurrentCopyWith<$Res> implements $CurrentCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {double temp_c,
-      double wind_kph,
-      double feelslike_c,
-      double gust_kph,
+      {double tempC,
+      double windKph,
+      double feelslikeC,
+      double gustKph,
       int cloud,
-      double pressure_mb,
-      double precip_mm,
+      double pressureMb,
+      double precipMm,
       double humidity,
-      String wind_dir,
+      String windDir,
       Condition condition});
 
   @override
@@ -545,53 +545,53 @@ class __$$_CurrentCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? temp_c = null,
-    Object? wind_kph = null,
-    Object? feelslike_c = null,
-    Object? gust_kph = null,
+    Object? tempC = null,
+    Object? windKph = null,
+    Object? feelslikeC = null,
+    Object? gustKph = null,
     Object? cloud = null,
-    Object? pressure_mb = null,
-    Object? precip_mm = null,
+    Object? pressureMb = null,
+    Object? precipMm = null,
     Object? humidity = null,
-    Object? wind_dir = null,
+    Object? windDir = null,
     Object? condition = null,
   }) {
     return _then(_$_Current(
-      temp_c: null == temp_c
-          ? _value.temp_c
-          : temp_c // ignore: cast_nullable_to_non_nullable
+      tempC: null == tempC
+          ? _value.tempC
+          : tempC // ignore: cast_nullable_to_non_nullable
               as double,
-      wind_kph: null == wind_kph
-          ? _value.wind_kph
-          : wind_kph // ignore: cast_nullable_to_non_nullable
+      windKph: null == windKph
+          ? _value.windKph
+          : windKph // ignore: cast_nullable_to_non_nullable
               as double,
-      feelslike_c: null == feelslike_c
-          ? _value.feelslike_c
-          : feelslike_c // ignore: cast_nullable_to_non_nullable
+      feelslikeC: null == feelslikeC
+          ? _value.feelslikeC
+          : feelslikeC // ignore: cast_nullable_to_non_nullable
               as double,
-      gust_kph: null == gust_kph
-          ? _value.gust_kph
-          : gust_kph // ignore: cast_nullable_to_non_nullable
+      gustKph: null == gustKph
+          ? _value.gustKph
+          : gustKph // ignore: cast_nullable_to_non_nullable
               as double,
       cloud: null == cloud
           ? _value.cloud
           : cloud // ignore: cast_nullable_to_non_nullable
               as int,
-      pressure_mb: null == pressure_mb
-          ? _value.pressure_mb
-          : pressure_mb // ignore: cast_nullable_to_non_nullable
+      pressureMb: null == pressureMb
+          ? _value.pressureMb
+          : pressureMb // ignore: cast_nullable_to_non_nullable
               as double,
-      precip_mm: null == precip_mm
-          ? _value.precip_mm
-          : precip_mm // ignore: cast_nullable_to_non_nullable
+      precipMm: null == precipMm
+          ? _value.precipMm
+          : precipMm // ignore: cast_nullable_to_non_nullable
               as double,
       humidity: null == humidity
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
               as double,
-      wind_dir: null == wind_dir
-          ? _value.wind_dir
-          : wind_dir // ignore: cast_nullable_to_non_nullable
+      windDir: null == windDir
+          ? _value.windDir
+          : windDir // ignore: cast_nullable_to_non_nullable
               as String,
       condition: null == condition
           ? _value.condition
@@ -605,44 +605,44 @@ class __$$_CurrentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Current implements _Current {
   _$_Current(
-      {required this.temp_c,
-      required this.wind_kph,
-      required this.feelslike_c,
-      required this.gust_kph,
+      {required this.tempC,
+      required this.windKph,
+      required this.feelslikeC,
+      required this.gustKph,
       required this.cloud,
-      required this.pressure_mb,
-      required this.precip_mm,
+      required this.pressureMb,
+      required this.precipMm,
       required this.humidity,
-      required this.wind_dir,
+      required this.windDir,
       required this.condition});
 
   factory _$_Current.fromJson(Map<String, dynamic> json) =>
       _$$_CurrentFromJson(json);
 
   @override
-  final double temp_c;
+  final double tempC;
   @override
-  final double wind_kph;
+  final double windKph;
   @override
-  final double feelslike_c;
+  final double feelslikeC;
   @override
-  final double gust_kph;
+  final double gustKph;
   @override
   final int cloud;
   @override
-  final double pressure_mb;
+  final double pressureMb;
   @override
-  final double precip_mm;
+  final double precipMm;
   @override
   final double humidity;
   @override
-  final String wind_dir;
+  final String windDir;
   @override
   final Condition condition;
 
   @override
   String toString() {
-    return 'Current(temp_c: $temp_c, wind_kph: $wind_kph, feelslike_c: $feelslike_c, gust_kph: $gust_kph, cloud: $cloud, pressure_mb: $pressure_mb, precip_mm: $precip_mm, humidity: $humidity, wind_dir: $wind_dir, condition: $condition)';
+    return 'Current(tempC: $tempC, windKph: $windKph, feelslikeC: $feelslikeC, gustKph: $gustKph, cloud: $cloud, pressureMb: $pressureMb, precipMm: $precipMm, humidity: $humidity, windDir: $windDir, condition: $condition)';
   }
 
   @override
@@ -650,30 +650,27 @@ class _$_Current implements _Current {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Current &&
-            (identical(other.temp_c, temp_c) || other.temp_c == temp_c) &&
-            (identical(other.wind_kph, wind_kph) ||
-                other.wind_kph == wind_kph) &&
-            (identical(other.feelslike_c, feelslike_c) ||
-                other.feelslike_c == feelslike_c) &&
-            (identical(other.gust_kph, gust_kph) ||
-                other.gust_kph == gust_kph) &&
+            (identical(other.tempC, tempC) || other.tempC == tempC) &&
+            (identical(other.windKph, windKph) || other.windKph == windKph) &&
+            (identical(other.feelslikeC, feelslikeC) ||
+                other.feelslikeC == feelslikeC) &&
+            (identical(other.gustKph, gustKph) || other.gustKph == gustKph) &&
             (identical(other.cloud, cloud) || other.cloud == cloud) &&
-            (identical(other.pressure_mb, pressure_mb) ||
-                other.pressure_mb == pressure_mb) &&
-            (identical(other.precip_mm, precip_mm) ||
-                other.precip_mm == precip_mm) &&
+            (identical(other.pressureMb, pressureMb) ||
+                other.pressureMb == pressureMb) &&
+            (identical(other.precipMm, precipMm) ||
+                other.precipMm == precipMm) &&
             (identical(other.humidity, humidity) ||
                 other.humidity == humidity) &&
-            (identical(other.wind_dir, wind_dir) ||
-                other.wind_dir == wind_dir) &&
+            (identical(other.windDir, windDir) || other.windDir == windDir) &&
             (identical(other.condition, condition) ||
                 other.condition == condition));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, temp_c, wind_kph, feelslike_c,
-      gust_kph, cloud, pressure_mb, precip_mm, humidity, wind_dir, condition);
+  int get hashCode => Object.hash(runtimeType, tempC, windKph, feelslikeC,
+      gustKph, cloud, pressureMb, precipMm, humidity, windDir, condition);
 
   @JsonKey(ignore: true)
   @override
@@ -691,37 +688,37 @@ class _$_Current implements _Current {
 
 abstract class _Current implements Current {
   factory _Current(
-      {required final double temp_c,
-      required final double wind_kph,
-      required final double feelslike_c,
-      required final double gust_kph,
+      {required final double tempC,
+      required final double windKph,
+      required final double feelslikeC,
+      required final double gustKph,
       required final int cloud,
-      required final double pressure_mb,
-      required final double precip_mm,
+      required final double pressureMb,
+      required final double precipMm,
       required final double humidity,
-      required final String wind_dir,
+      required final String windDir,
       required final Condition condition}) = _$_Current;
 
   factory _Current.fromJson(Map<String, dynamic> json) = _$_Current.fromJson;
 
   @override
-  double get temp_c;
+  double get tempC;
   @override
-  double get wind_kph;
+  double get windKph;
   @override
-  double get feelslike_c;
+  double get feelslikeC;
   @override
-  double get gust_kph;
+  double get gustKph;
   @override
   int get cloud;
   @override
-  double get pressure_mb;
+  double get pressureMb;
   @override
-  double get precip_mm;
+  double get precipMm;
   @override
   double get humidity;
   @override
-  String get wind_dir;
+  String get windDir;
   @override
   Condition get condition;
   @override
@@ -1012,7 +1009,7 @@ Forecastday _$ForecastdayFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Forecastday {
-  String get date => throw _privateConstructorUsedError;
+  DateTime get date => throw _privateConstructorUsedError;
   Day get day => throw _privateConstructorUsedError;
   Astro get astro => throw _privateConstructorUsedError;
   List<Hour> get hour => throw _privateConstructorUsedError;
@@ -1029,7 +1026,7 @@ abstract class $ForecastdayCopyWith<$Res> {
           Forecastday value, $Res Function(Forecastday) then) =
       _$ForecastdayCopyWithImpl<$Res, Forecastday>;
   @useResult
-  $Res call({String date, Day day, Astro astro, List<Hour> hour});
+  $Res call({DateTime date, Day day, Astro astro, List<Hour> hour});
 
   $DayCopyWith<$Res> get day;
   $AstroCopyWith<$Res> get astro;
@@ -1057,7 +1054,7 @@ class _$ForecastdayCopyWithImpl<$Res, $Val extends Forecastday>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       day: null == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
@@ -1098,7 +1095,7 @@ abstract class _$$_ForecastdayCopyWith<$Res>
       __$$_ForecastdayCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String date, Day day, Astro astro, List<Hour> hour});
+  $Res call({DateTime date, Day day, Astro astro, List<Hour> hour});
 
   @override
   $DayCopyWith<$Res> get day;
@@ -1126,7 +1123,7 @@ class __$$_ForecastdayCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       day: null == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
@@ -1157,7 +1154,7 @@ class _$_Forecastday implements _Forecastday {
       _$$_ForecastdayFromJson(json);
 
   @override
-  final String date;
+  final DateTime date;
   @override
   final Day day;
   @override
@@ -1207,7 +1204,7 @@ class _$_Forecastday implements _Forecastday {
 
 abstract class _Forecastday implements Forecastday {
   factory _Forecastday(
-      {required final String date,
+      {required final DateTime date,
       required final Day day,
       required final Astro astro,
       required final List<Hour> hour}) = _$_Forecastday;
@@ -1216,7 +1213,7 @@ abstract class _Forecastday implements Forecastday {
       _$_Forecastday.fromJson;
 
   @override
-  String get date;
+  DateTime get date;
   @override
   Day get day;
   @override
@@ -1235,15 +1232,15 @@ Day _$DayFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Day {
-  double get maxtemp_c => throw _privateConstructorUsedError;
-  double get mintemp_c => throw _privateConstructorUsedError;
-  double get maxwind_kph => throw _privateConstructorUsedError;
-  double get totalprecip_mm => throw _privateConstructorUsedError;
-  double get totalsnow_cm => throw _privateConstructorUsedError;
+  double get maxtempC => throw _privateConstructorUsedError;
+  double get mintempC => throw _privateConstructorUsedError;
+  double get maxwindKph => throw _privateConstructorUsedError;
+  double get totalprecipMm => throw _privateConstructorUsedError;
+  double get totalsnowCm => throw _privateConstructorUsedError;
   double get avghumidity => throw _privateConstructorUsedError;
-  double get daily_chance_of_rain => throw _privateConstructorUsedError;
-  double get daily_chance_of_snow => throw _privateConstructorUsedError;
-  double get avgvis_km => throw _privateConstructorUsedError;
+  double get dailyChanceOfRain => throw _privateConstructorUsedError;
+  double get dailyChanceOfSnow => throw _privateConstructorUsedError;
+  double get avgvisKm => throw _privateConstructorUsedError;
   Condition get condition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1257,15 +1254,15 @@ abstract class $DayCopyWith<$Res> {
       _$DayCopyWithImpl<$Res, Day>;
   @useResult
   $Res call(
-      {double maxtemp_c,
-      double mintemp_c,
-      double maxwind_kph,
-      double totalprecip_mm,
-      double totalsnow_cm,
+      {double maxtempC,
+      double mintempC,
+      double maxwindKph,
+      double totalprecipMm,
+      double totalsnowCm,
       double avghumidity,
-      double daily_chance_of_rain,
-      double daily_chance_of_snow,
-      double avgvis_km,
+      double dailyChanceOfRain,
+      double dailyChanceOfSnow,
+      double avgvisKm,
       Condition condition});
 
   $ConditionCopyWith<$Res> get condition;
@@ -1283,53 +1280,53 @@ class _$DayCopyWithImpl<$Res, $Val extends Day> implements $DayCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxtemp_c = null,
-    Object? mintemp_c = null,
-    Object? maxwind_kph = null,
-    Object? totalprecip_mm = null,
-    Object? totalsnow_cm = null,
+    Object? maxtempC = null,
+    Object? mintempC = null,
+    Object? maxwindKph = null,
+    Object? totalprecipMm = null,
+    Object? totalsnowCm = null,
     Object? avghumidity = null,
-    Object? daily_chance_of_rain = null,
-    Object? daily_chance_of_snow = null,
-    Object? avgvis_km = null,
+    Object? dailyChanceOfRain = null,
+    Object? dailyChanceOfSnow = null,
+    Object? avgvisKm = null,
     Object? condition = null,
   }) {
     return _then(_value.copyWith(
-      maxtemp_c: null == maxtemp_c
-          ? _value.maxtemp_c
-          : maxtemp_c // ignore: cast_nullable_to_non_nullable
+      maxtempC: null == maxtempC
+          ? _value.maxtempC
+          : maxtempC // ignore: cast_nullable_to_non_nullable
               as double,
-      mintemp_c: null == mintemp_c
-          ? _value.mintemp_c
-          : mintemp_c // ignore: cast_nullable_to_non_nullable
+      mintempC: null == mintempC
+          ? _value.mintempC
+          : mintempC // ignore: cast_nullable_to_non_nullable
               as double,
-      maxwind_kph: null == maxwind_kph
-          ? _value.maxwind_kph
-          : maxwind_kph // ignore: cast_nullable_to_non_nullable
+      maxwindKph: null == maxwindKph
+          ? _value.maxwindKph
+          : maxwindKph // ignore: cast_nullable_to_non_nullable
               as double,
-      totalprecip_mm: null == totalprecip_mm
-          ? _value.totalprecip_mm
-          : totalprecip_mm // ignore: cast_nullable_to_non_nullable
+      totalprecipMm: null == totalprecipMm
+          ? _value.totalprecipMm
+          : totalprecipMm // ignore: cast_nullable_to_non_nullable
               as double,
-      totalsnow_cm: null == totalsnow_cm
-          ? _value.totalsnow_cm
-          : totalsnow_cm // ignore: cast_nullable_to_non_nullable
+      totalsnowCm: null == totalsnowCm
+          ? _value.totalsnowCm
+          : totalsnowCm // ignore: cast_nullable_to_non_nullable
               as double,
       avghumidity: null == avghumidity
           ? _value.avghumidity
           : avghumidity // ignore: cast_nullable_to_non_nullable
               as double,
-      daily_chance_of_rain: null == daily_chance_of_rain
-          ? _value.daily_chance_of_rain
-          : daily_chance_of_rain // ignore: cast_nullable_to_non_nullable
+      dailyChanceOfRain: null == dailyChanceOfRain
+          ? _value.dailyChanceOfRain
+          : dailyChanceOfRain // ignore: cast_nullable_to_non_nullable
               as double,
-      daily_chance_of_snow: null == daily_chance_of_snow
-          ? _value.daily_chance_of_snow
-          : daily_chance_of_snow // ignore: cast_nullable_to_non_nullable
+      dailyChanceOfSnow: null == dailyChanceOfSnow
+          ? _value.dailyChanceOfSnow
+          : dailyChanceOfSnow // ignore: cast_nullable_to_non_nullable
               as double,
-      avgvis_km: null == avgvis_km
-          ? _value.avgvis_km
-          : avgvis_km // ignore: cast_nullable_to_non_nullable
+      avgvisKm: null == avgvisKm
+          ? _value.avgvisKm
+          : avgvisKm // ignore: cast_nullable_to_non_nullable
               as double,
       condition: null == condition
           ? _value.condition
@@ -1354,15 +1351,15 @@ abstract class _$$_DayCopyWith<$Res> implements $DayCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {double maxtemp_c,
-      double mintemp_c,
-      double maxwind_kph,
-      double totalprecip_mm,
-      double totalsnow_cm,
+      {double maxtempC,
+      double mintempC,
+      double maxwindKph,
+      double totalprecipMm,
+      double totalsnowCm,
       double avghumidity,
-      double daily_chance_of_rain,
-      double daily_chance_of_snow,
-      double avgvis_km,
+      double dailyChanceOfRain,
+      double dailyChanceOfSnow,
+      double avgvisKm,
       Condition condition});
 
   @override
@@ -1378,53 +1375,53 @@ class __$$_DayCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res, _$_Day>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? maxtemp_c = null,
-    Object? mintemp_c = null,
-    Object? maxwind_kph = null,
-    Object? totalprecip_mm = null,
-    Object? totalsnow_cm = null,
+    Object? maxtempC = null,
+    Object? mintempC = null,
+    Object? maxwindKph = null,
+    Object? totalprecipMm = null,
+    Object? totalsnowCm = null,
     Object? avghumidity = null,
-    Object? daily_chance_of_rain = null,
-    Object? daily_chance_of_snow = null,
-    Object? avgvis_km = null,
+    Object? dailyChanceOfRain = null,
+    Object? dailyChanceOfSnow = null,
+    Object? avgvisKm = null,
     Object? condition = null,
   }) {
     return _then(_$_Day(
-      maxtemp_c: null == maxtemp_c
-          ? _value.maxtemp_c
-          : maxtemp_c // ignore: cast_nullable_to_non_nullable
+      maxtempC: null == maxtempC
+          ? _value.maxtempC
+          : maxtempC // ignore: cast_nullable_to_non_nullable
               as double,
-      mintemp_c: null == mintemp_c
-          ? _value.mintemp_c
-          : mintemp_c // ignore: cast_nullable_to_non_nullable
+      mintempC: null == mintempC
+          ? _value.mintempC
+          : mintempC // ignore: cast_nullable_to_non_nullable
               as double,
-      maxwind_kph: null == maxwind_kph
-          ? _value.maxwind_kph
-          : maxwind_kph // ignore: cast_nullable_to_non_nullable
+      maxwindKph: null == maxwindKph
+          ? _value.maxwindKph
+          : maxwindKph // ignore: cast_nullable_to_non_nullable
               as double,
-      totalprecip_mm: null == totalprecip_mm
-          ? _value.totalprecip_mm
-          : totalprecip_mm // ignore: cast_nullable_to_non_nullable
+      totalprecipMm: null == totalprecipMm
+          ? _value.totalprecipMm
+          : totalprecipMm // ignore: cast_nullable_to_non_nullable
               as double,
-      totalsnow_cm: null == totalsnow_cm
-          ? _value.totalsnow_cm
-          : totalsnow_cm // ignore: cast_nullable_to_non_nullable
+      totalsnowCm: null == totalsnowCm
+          ? _value.totalsnowCm
+          : totalsnowCm // ignore: cast_nullable_to_non_nullable
               as double,
       avghumidity: null == avghumidity
           ? _value.avghumidity
           : avghumidity // ignore: cast_nullable_to_non_nullable
               as double,
-      daily_chance_of_rain: null == daily_chance_of_rain
-          ? _value.daily_chance_of_rain
-          : daily_chance_of_rain // ignore: cast_nullable_to_non_nullable
+      dailyChanceOfRain: null == dailyChanceOfRain
+          ? _value.dailyChanceOfRain
+          : dailyChanceOfRain // ignore: cast_nullable_to_non_nullable
               as double,
-      daily_chance_of_snow: null == daily_chance_of_snow
-          ? _value.daily_chance_of_snow
-          : daily_chance_of_snow // ignore: cast_nullable_to_non_nullable
+      dailyChanceOfSnow: null == dailyChanceOfSnow
+          ? _value.dailyChanceOfSnow
+          : dailyChanceOfSnow // ignore: cast_nullable_to_non_nullable
               as double,
-      avgvis_km: null == avgvis_km
-          ? _value.avgvis_km
-          : avgvis_km // ignore: cast_nullable_to_non_nullable
+      avgvisKm: null == avgvisKm
+          ? _value.avgvisKm
+          : avgvisKm // ignore: cast_nullable_to_non_nullable
               as double,
       condition: null == condition
           ? _value.condition
@@ -1438,43 +1435,43 @@ class __$$_DayCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res, _$_Day>
 @JsonSerializable()
 class _$_Day implements _Day {
   _$_Day(
-      {required this.maxtemp_c,
-      required this.mintemp_c,
-      required this.maxwind_kph,
-      required this.totalprecip_mm,
-      required this.totalsnow_cm,
+      {required this.maxtempC,
+      required this.mintempC,
+      required this.maxwindKph,
+      required this.totalprecipMm,
+      required this.totalsnowCm,
       required this.avghumidity,
-      required this.daily_chance_of_rain,
-      required this.daily_chance_of_snow,
-      required this.avgvis_km,
+      required this.dailyChanceOfRain,
+      required this.dailyChanceOfSnow,
+      required this.avgvisKm,
       required this.condition});
 
   factory _$_Day.fromJson(Map<String, dynamic> json) => _$$_DayFromJson(json);
 
   @override
-  final double maxtemp_c;
+  final double maxtempC;
   @override
-  final double mintemp_c;
+  final double mintempC;
   @override
-  final double maxwind_kph;
+  final double maxwindKph;
   @override
-  final double totalprecip_mm;
+  final double totalprecipMm;
   @override
-  final double totalsnow_cm;
+  final double totalsnowCm;
   @override
   final double avghumidity;
   @override
-  final double daily_chance_of_rain;
+  final double dailyChanceOfRain;
   @override
-  final double daily_chance_of_snow;
+  final double dailyChanceOfSnow;
   @override
-  final double avgvis_km;
+  final double avgvisKm;
   @override
   final Condition condition;
 
   @override
   String toString() {
-    return 'Day(maxtemp_c: $maxtemp_c, mintemp_c: $mintemp_c, maxwind_kph: $maxwind_kph, totalprecip_mm: $totalprecip_mm, totalsnow_cm: $totalsnow_cm, avghumidity: $avghumidity, daily_chance_of_rain: $daily_chance_of_rain, daily_chance_of_snow: $daily_chance_of_snow, avgvis_km: $avgvis_km, condition: $condition)';
+    return 'Day(maxtempC: $maxtempC, mintempC: $mintempC, maxwindKph: $maxwindKph, totalprecipMm: $totalprecipMm, totalsnowCm: $totalsnowCm, avghumidity: $avghumidity, dailyChanceOfRain: $dailyChanceOfRain, dailyChanceOfSnow: $dailyChanceOfSnow, avgvisKm: $avgvisKm, condition: $condition)';
   }
 
   @override
@@ -1482,24 +1479,24 @@ class _$_Day implements _Day {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Day &&
-            (identical(other.maxtemp_c, maxtemp_c) ||
-                other.maxtemp_c == maxtemp_c) &&
-            (identical(other.mintemp_c, mintemp_c) ||
-                other.mintemp_c == mintemp_c) &&
-            (identical(other.maxwind_kph, maxwind_kph) ||
-                other.maxwind_kph == maxwind_kph) &&
-            (identical(other.totalprecip_mm, totalprecip_mm) ||
-                other.totalprecip_mm == totalprecip_mm) &&
-            (identical(other.totalsnow_cm, totalsnow_cm) ||
-                other.totalsnow_cm == totalsnow_cm) &&
+            (identical(other.maxtempC, maxtempC) ||
+                other.maxtempC == maxtempC) &&
+            (identical(other.mintempC, mintempC) ||
+                other.mintempC == mintempC) &&
+            (identical(other.maxwindKph, maxwindKph) ||
+                other.maxwindKph == maxwindKph) &&
+            (identical(other.totalprecipMm, totalprecipMm) ||
+                other.totalprecipMm == totalprecipMm) &&
+            (identical(other.totalsnowCm, totalsnowCm) ||
+                other.totalsnowCm == totalsnowCm) &&
             (identical(other.avghumidity, avghumidity) ||
                 other.avghumidity == avghumidity) &&
-            (identical(other.daily_chance_of_rain, daily_chance_of_rain) ||
-                other.daily_chance_of_rain == daily_chance_of_rain) &&
-            (identical(other.daily_chance_of_snow, daily_chance_of_snow) ||
-                other.daily_chance_of_snow == daily_chance_of_snow) &&
-            (identical(other.avgvis_km, avgvis_km) ||
-                other.avgvis_km == avgvis_km) &&
+            (identical(other.dailyChanceOfRain, dailyChanceOfRain) ||
+                other.dailyChanceOfRain == dailyChanceOfRain) &&
+            (identical(other.dailyChanceOfSnow, dailyChanceOfSnow) ||
+                other.dailyChanceOfSnow == dailyChanceOfSnow) &&
+            (identical(other.avgvisKm, avgvisKm) ||
+                other.avgvisKm == avgvisKm) &&
             (identical(other.condition, condition) ||
                 other.condition == condition));
   }
@@ -1508,15 +1505,15 @@ class _$_Day implements _Day {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      maxtemp_c,
-      mintemp_c,
-      maxwind_kph,
-      totalprecip_mm,
-      totalsnow_cm,
+      maxtempC,
+      mintempC,
+      maxwindKph,
+      totalprecipMm,
+      totalsnowCm,
       avghumidity,
-      daily_chance_of_rain,
-      daily_chance_of_snow,
-      avgvis_km,
+      dailyChanceOfRain,
+      dailyChanceOfSnow,
+      avgvisKm,
       condition);
 
   @JsonKey(ignore: true)
@@ -1535,37 +1532,37 @@ class _$_Day implements _Day {
 
 abstract class _Day implements Day {
   factory _Day(
-      {required final double maxtemp_c,
-      required final double mintemp_c,
-      required final double maxwind_kph,
-      required final double totalprecip_mm,
-      required final double totalsnow_cm,
+      {required final double maxtempC,
+      required final double mintempC,
+      required final double maxwindKph,
+      required final double totalprecipMm,
+      required final double totalsnowCm,
       required final double avghumidity,
-      required final double daily_chance_of_rain,
-      required final double daily_chance_of_snow,
-      required final double avgvis_km,
+      required final double dailyChanceOfRain,
+      required final double dailyChanceOfSnow,
+      required final double avgvisKm,
       required final Condition condition}) = _$_Day;
 
   factory _Day.fromJson(Map<String, dynamic> json) = _$_Day.fromJson;
 
   @override
-  double get maxtemp_c;
+  double get maxtempC;
   @override
-  double get mintemp_c;
+  double get mintempC;
   @override
-  double get maxwind_kph;
+  double get maxwindKph;
   @override
-  double get totalprecip_mm;
+  double get totalprecipMm;
   @override
-  double get totalsnow_cm;
+  double get totalsnowCm;
   @override
   double get avghumidity;
   @override
-  double get daily_chance_of_rain;
+  double get dailyChanceOfRain;
   @override
-  double get daily_chance_of_snow;
+  double get dailyChanceOfSnow;
   @override
-  double get avgvis_km;
+  double get avgvisKm;
   @override
   Condition get condition;
   @override
@@ -1766,9 +1763,19 @@ Hour _$HourFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Hour {
-  double get temp_c => throw _privateConstructorUsedError;
-  String get time => throw _privateConstructorUsedError;
+  double get tempC => throw _privateConstructorUsedError;
+  DateTime get time => throw _privateConstructorUsedError;
   Condition get condition => throw _privateConstructorUsedError;
+  double get windKph => throw _privateConstructorUsedError;
+  String get windDir => throw _privateConstructorUsedError;
+  double get pressureMb => throw _privateConstructorUsedError;
+  double get precipMm => throw _privateConstructorUsedError;
+  double get humidity => throw _privateConstructorUsedError;
+  double get cloud => throw _privateConstructorUsedError;
+  double get chanceOfRain => throw _privateConstructorUsedError;
+  double get chanceOfSnow => throw _privateConstructorUsedError;
+  double get gustKph => throw _privateConstructorUsedError;
+  double get dewpointC => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1780,7 +1787,20 @@ abstract class $HourCopyWith<$Res> {
   factory $HourCopyWith(Hour value, $Res Function(Hour) then) =
       _$HourCopyWithImpl<$Res, Hour>;
   @useResult
-  $Res call({double temp_c, String time, Condition condition});
+  $Res call(
+      {double tempC,
+      DateTime time,
+      Condition condition,
+      double windKph,
+      String windDir,
+      double pressureMb,
+      double precipMm,
+      double humidity,
+      double cloud,
+      double chanceOfRain,
+      double chanceOfSnow,
+      double gustKph,
+      double dewpointC});
 
   $ConditionCopyWith<$Res> get condition;
 }
@@ -1798,23 +1818,73 @@ class _$HourCopyWithImpl<$Res, $Val extends Hour>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? temp_c = null,
+    Object? tempC = null,
     Object? time = null,
     Object? condition = null,
+    Object? windKph = null,
+    Object? windDir = null,
+    Object? pressureMb = null,
+    Object? precipMm = null,
+    Object? humidity = null,
+    Object? cloud = null,
+    Object? chanceOfRain = null,
+    Object? chanceOfSnow = null,
+    Object? gustKph = null,
+    Object? dewpointC = null,
   }) {
     return _then(_value.copyWith(
-      temp_c: null == temp_c
-          ? _value.temp_c
-          : temp_c // ignore: cast_nullable_to_non_nullable
+      tempC: null == tempC
+          ? _value.tempC
+          : tempC // ignore: cast_nullable_to_non_nullable
               as double,
       time: null == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       condition: null == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as Condition,
+      windKph: null == windKph
+          ? _value.windKph
+          : windKph // ignore: cast_nullable_to_non_nullable
+              as double,
+      windDir: null == windDir
+          ? _value.windDir
+          : windDir // ignore: cast_nullable_to_non_nullable
+              as String,
+      pressureMb: null == pressureMb
+          ? _value.pressureMb
+          : pressureMb // ignore: cast_nullable_to_non_nullable
+              as double,
+      precipMm: null == precipMm
+          ? _value.precipMm
+          : precipMm // ignore: cast_nullable_to_non_nullable
+              as double,
+      humidity: null == humidity
+          ? _value.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as double,
+      cloud: null == cloud
+          ? _value.cloud
+          : cloud // ignore: cast_nullable_to_non_nullable
+              as double,
+      chanceOfRain: null == chanceOfRain
+          ? _value.chanceOfRain
+          : chanceOfRain // ignore: cast_nullable_to_non_nullable
+              as double,
+      chanceOfSnow: null == chanceOfSnow
+          ? _value.chanceOfSnow
+          : chanceOfSnow // ignore: cast_nullable_to_non_nullable
+              as double,
+      gustKph: null == gustKph
+          ? _value.gustKph
+          : gustKph // ignore: cast_nullable_to_non_nullable
+              as double,
+      dewpointC: null == dewpointC
+          ? _value.dewpointC
+          : dewpointC // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 
@@ -1833,7 +1903,20 @@ abstract class _$$_HourCopyWith<$Res> implements $HourCopyWith<$Res> {
       __$$_HourCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double temp_c, String time, Condition condition});
+  $Res call(
+      {double tempC,
+      DateTime time,
+      Condition condition,
+      double windKph,
+      String windDir,
+      double pressureMb,
+      double precipMm,
+      double humidity,
+      double cloud,
+      double chanceOfRain,
+      double chanceOfSnow,
+      double gustKph,
+      double dewpointC});
 
   @override
   $ConditionCopyWith<$Res> get condition;
@@ -1848,23 +1931,73 @@ class __$$_HourCopyWithImpl<$Res> extends _$HourCopyWithImpl<$Res, _$_Hour>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? temp_c = null,
+    Object? tempC = null,
     Object? time = null,
     Object? condition = null,
+    Object? windKph = null,
+    Object? windDir = null,
+    Object? pressureMb = null,
+    Object? precipMm = null,
+    Object? humidity = null,
+    Object? cloud = null,
+    Object? chanceOfRain = null,
+    Object? chanceOfSnow = null,
+    Object? gustKph = null,
+    Object? dewpointC = null,
   }) {
     return _then(_$_Hour(
-      temp_c: null == temp_c
-          ? _value.temp_c
-          : temp_c // ignore: cast_nullable_to_non_nullable
+      tempC: null == tempC
+          ? _value.tempC
+          : tempC // ignore: cast_nullable_to_non_nullable
               as double,
       time: null == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       condition: null == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as Condition,
+      windKph: null == windKph
+          ? _value.windKph
+          : windKph // ignore: cast_nullable_to_non_nullable
+              as double,
+      windDir: null == windDir
+          ? _value.windDir
+          : windDir // ignore: cast_nullable_to_non_nullable
+              as String,
+      pressureMb: null == pressureMb
+          ? _value.pressureMb
+          : pressureMb // ignore: cast_nullable_to_non_nullable
+              as double,
+      precipMm: null == precipMm
+          ? _value.precipMm
+          : precipMm // ignore: cast_nullable_to_non_nullable
+              as double,
+      humidity: null == humidity
+          ? _value.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as double,
+      cloud: null == cloud
+          ? _value.cloud
+          : cloud // ignore: cast_nullable_to_non_nullable
+              as double,
+      chanceOfRain: null == chanceOfRain
+          ? _value.chanceOfRain
+          : chanceOfRain // ignore: cast_nullable_to_non_nullable
+              as double,
+      chanceOfSnow: null == chanceOfSnow
+          ? _value.chanceOfSnow
+          : chanceOfSnow // ignore: cast_nullable_to_non_nullable
+              as double,
+      gustKph: null == gustKph
+          ? _value.gustKph
+          : gustKph // ignore: cast_nullable_to_non_nullable
+              as double,
+      dewpointC: null == dewpointC
+          ? _value.dewpointC
+          : dewpointC // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -1872,20 +2005,53 @@ class __$$_HourCopyWithImpl<$Res> extends _$HourCopyWithImpl<$Res, _$_Hour>
 /// @nodoc
 @JsonSerializable()
 class _$_Hour implements _Hour {
-  _$_Hour({required this.temp_c, required this.time, required this.condition});
+  _$_Hour(
+      {required this.tempC,
+      required this.time,
+      required this.condition,
+      required this.windKph,
+      required this.windDir,
+      required this.pressureMb,
+      required this.precipMm,
+      required this.humidity,
+      required this.cloud,
+      required this.chanceOfRain,
+      required this.chanceOfSnow,
+      required this.gustKph,
+      required this.dewpointC});
 
   factory _$_Hour.fromJson(Map<String, dynamic> json) => _$$_HourFromJson(json);
 
   @override
-  final double temp_c;
+  final double tempC;
   @override
-  final String time;
+  final DateTime time;
   @override
   final Condition condition;
+  @override
+  final double windKph;
+  @override
+  final String windDir;
+  @override
+  final double pressureMb;
+  @override
+  final double precipMm;
+  @override
+  final double humidity;
+  @override
+  final double cloud;
+  @override
+  final double chanceOfRain;
+  @override
+  final double chanceOfSnow;
+  @override
+  final double gustKph;
+  @override
+  final double dewpointC;
 
   @override
   String toString() {
-    return 'Hour(temp_c: $temp_c, time: $time, condition: $condition)';
+    return 'Hour(tempC: $tempC, time: $time, condition: $condition, windKph: $windKph, windDir: $windDir, pressureMb: $pressureMb, precipMm: $precipMm, humidity: $humidity, cloud: $cloud, chanceOfRain: $chanceOfRain, chanceOfSnow: $chanceOfSnow, gustKph: $gustKph, dewpointC: $dewpointC)';
   }
 
   @override
@@ -1893,15 +2059,45 @@ class _$_Hour implements _Hour {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Hour &&
-            (identical(other.temp_c, temp_c) || other.temp_c == temp_c) &&
+            (identical(other.tempC, tempC) || other.tempC == tempC) &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.condition, condition) ||
-                other.condition == condition));
+                other.condition == condition) &&
+            (identical(other.windKph, windKph) || other.windKph == windKph) &&
+            (identical(other.windDir, windDir) || other.windDir == windDir) &&
+            (identical(other.pressureMb, pressureMb) ||
+                other.pressureMb == pressureMb) &&
+            (identical(other.precipMm, precipMm) ||
+                other.precipMm == precipMm) &&
+            (identical(other.humidity, humidity) ||
+                other.humidity == humidity) &&
+            (identical(other.cloud, cloud) || other.cloud == cloud) &&
+            (identical(other.chanceOfRain, chanceOfRain) ||
+                other.chanceOfRain == chanceOfRain) &&
+            (identical(other.chanceOfSnow, chanceOfSnow) ||
+                other.chanceOfSnow == chanceOfSnow) &&
+            (identical(other.gustKph, gustKph) || other.gustKph == gustKph) &&
+            (identical(other.dewpointC, dewpointC) ||
+                other.dewpointC == dewpointC));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, temp_c, time, condition);
+  int get hashCode => Object.hash(
+      runtimeType,
+      tempC,
+      time,
+      condition,
+      windKph,
+      windDir,
+      pressureMb,
+      precipMm,
+      humidity,
+      cloud,
+      chanceOfRain,
+      chanceOfSnow,
+      gustKph,
+      dewpointC);
 
   @JsonKey(ignore: true)
   @override
@@ -1919,18 +2115,48 @@ class _$_Hour implements _Hour {
 
 abstract class _Hour implements Hour {
   factory _Hour(
-      {required final double temp_c,
-      required final String time,
-      required final Condition condition}) = _$_Hour;
+      {required final double tempC,
+      required final DateTime time,
+      required final Condition condition,
+      required final double windKph,
+      required final String windDir,
+      required final double pressureMb,
+      required final double precipMm,
+      required final double humidity,
+      required final double cloud,
+      required final double chanceOfRain,
+      required final double chanceOfSnow,
+      required final double gustKph,
+      required final double dewpointC}) = _$_Hour;
 
   factory _Hour.fromJson(Map<String, dynamic> json) = _$_Hour.fromJson;
 
   @override
-  double get temp_c;
+  double get tempC;
   @override
-  String get time;
+  DateTime get time;
   @override
   Condition get condition;
+  @override
+  double get windKph;
+  @override
+  String get windDir;
+  @override
+  double get pressureMb;
+  @override
+  double get precipMm;
+  @override
+  double get humidity;
+  @override
+  double get cloud;
+  @override
+  double get chanceOfRain;
+  @override
+  double get chanceOfSnow;
+  @override
+  double get gustKph;
+  @override
+  double get dewpointC;
   @override
   @JsonKey(ignore: true)
   _$$_HourCopyWith<_$_Hour> get copyWith => throw _privateConstructorUsedError;

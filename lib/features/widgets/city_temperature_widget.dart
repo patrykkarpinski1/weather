@@ -69,7 +69,7 @@ class CityTemperatureWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    model.current.temp_c.toString(),
+                    model.current.tempC.toString(),
                     style: const TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
@@ -95,7 +95,7 @@ class CityTemperatureWidget extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    model.current.feelslike_c.toString(),
+                    model.current.feelslikeC.toString(),
                     style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,

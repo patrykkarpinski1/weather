@@ -28,15 +28,15 @@ class Location with _$Location {
 @freezed
 class Current with _$Current {
   factory Current({
-    required double temp_c,
-    required double wind_kph,
-    required double feelslike_c,
-    required double gust_kph,
+    required double tempC,
+    required double windKph,
+    required double feelslikeC,
+    required double gustKph,
     required int cloud,
-    required double pressure_mb,
-    required double precip_mm,
+    required double pressureMb,
+    required double precipMm,
     required double humidity,
-    required String wind_dir,
+    required String windDir,
     required Condition condition,
   }) = _Current;
 
@@ -67,7 +67,7 @@ class Forecast with _$Forecast {
 @freezed
 class Forecastday with _$Forecastday {
   factory Forecastday({
-    required String date,
+    required DateTime date,
     required Day day,
     required Astro astro,
     required List<Hour> hour,
@@ -80,15 +80,15 @@ class Forecastday with _$Forecastday {
 @freezed
 class Day with _$Day {
   factory Day({
-    required double maxtemp_c,
-    required double mintemp_c,
-    required double maxwind_kph,
-    required double totalprecip_mm,
-    required double totalsnow_cm,
+    required double maxtempC,
+    required double mintempC,
+    required double maxwindKph,
+    required double totalprecipMm,
+    required double totalsnowCm,
     required double avghumidity,
-    required double daily_chance_of_rain,
-    required double daily_chance_of_snow,
-    required double avgvis_km,
+    required double dailyChanceOfRain,
+    required double dailyChanceOfSnow,
+    required double avgvisKm,
     required Condition condition,
   }) = _Day;
 
@@ -110,9 +110,19 @@ class Astro with _$Astro {
 @freezed
 class Hour with _$Hour {
   factory Hour({
-    required double temp_c,
-    required String time,
+    required double tempC,
+    required DateTime time,
     required Condition condition,
+    required double windKph,
+    required String windDir,
+    required double pressureMb,
+    required double precipMm,
+    required double humidity,
+    required double cloud,
+    required double chanceOfRain,
+    required double chanceOfSnow,
+    required double gustKph,
+    required double dewpointC,
   }) = _Hour;
 
   factory Hour.fromJson(Map<String, dynamic> json) => _$HourFromJson(json);
