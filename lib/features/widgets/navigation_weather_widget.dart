@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather/features/home/pages/day_weather_page.dart';
 import 'package:weather/features/home/pages/every_hour_weather_page.dart';
-import 'package:weather/features/home/pages/three_days_weather_page.dart';
+import 'package:weather/features/home/pages/next_days_weather_page_view.dart';
 import 'package:weather/model/weather_model.dart';
 
 class NavigationWeatherWidget extends StatelessWidget {
@@ -32,6 +32,7 @@ class NavigationWeatherWidget extends StatelessWidget {
                   ).push(MaterialPageRoute(
                       builder: (_) => DayWeatherPage(
                             model: model,
+                            index: 0,
                           )));
                 },
                 child: Column(
@@ -98,13 +99,13 @@ class NavigationWeatherWidget extends StatelessWidget {
                   Navigator.of(
                     context,
                   ).push(MaterialPageRoute(
-                      builder: (_) => ThreeDaysWeatherPage(
+                      builder: (_) => NextDaysWeatherPageView(
                             model: model,
                           )));
                 },
                 child: Column(
                   children: const [
-                    Text('For three days',
+                    Text('Next two days',
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     SizedBox(
                       height: 5,

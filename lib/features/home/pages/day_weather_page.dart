@@ -4,8 +4,9 @@ import 'package:weather/features/widgets/generete_row_widget.dart';
 import 'package:weather/model/weather_model.dart';
 
 class DayWeatherPage extends StatelessWidget {
-  const DayWeatherPage({super.key, required this.model});
+  const DayWeatherPage({super.key, required this.model, required this.index});
   final WeatherModel model;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class DayWeatherPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           DateFormat('yyyy-MM-dd')
-              .format(model.forecast.forecastday[0].date)
+              .format(model.forecast.forecastday[index].date)
               .toString(),
         ),
       ),
@@ -29,7 +30,7 @@ class DayWeatherPage extends StatelessWidget {
                     image: AssetImage('images/sun.png'),
                   ),
                   Text(
-                    model.forecast.forecastday[0].day.maxtempC.toString(),
+                    model.forecast.forecastday[index].day.maxtempC.toString(),
                     style: const TextStyle(
                       fontSize: 62,
                       fontWeight: FontWeight.bold,
@@ -59,7 +60,7 @@ class DayWeatherPage extends StatelessWidget {
               height: 10,
             ),
             Center(
-              child: Text(model.forecast.forecastday[0].day.condition.text),
+              child: Text(model.forecast.forecastday[index].day.condition.text),
             ),
             const SizedBox(
               height: 30,
@@ -68,28 +69,38 @@ class DayWeatherPage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
               child: Column(
                 children: [
-                  generateRow('Min. Temp C',
-                      model.forecast.forecastday[0].day.mintempC.toString()),
-                  generateRow('Max. Wind Kph',
-                      model.forecast.forecastday[0].day.maxwindKph.toString()),
+                  generateRow(
+                      'Min. Temp C',
+                      model.forecast.forecastday[index].day.mintempC
+                          .toString()),
+                  generateRow(
+                      'Max. Wind Kph',
+                      model.forecast.forecastday[index].day.maxwindKph
+                          .toString()),
                   generateRow(
                       'Total Precip mm',
-                      model.forecast.forecastday[0].day.totalprecipMm
+                      model.forecast.forecastday[index].day.totalprecipMm
                           .toString()),
-                  generateRow('Total Snow cm',
-                      model.forecast.forecastday[0].day.totalsnowCm.toString()),
-                  generateRow('Avg Humidity %',
-                      model.forecast.forecastday[0].day.avghumidity.toString()),
+                  generateRow(
+                      'Total Snow cm',
+                      model.forecast.forecastday[index].day.totalsnowCm
+                          .toString()),
+                  generateRow(
+                      'Avg Humidity %',
+                      model.forecast.forecastday[index].day.avghumidity
+                          .toString()),
                   generateRow(
                       'Daily Chance of Rain %',
-                      model.forecast.forecastday[0].day.dailyChanceOfRain
+                      model.forecast.forecastday[index].day.dailyChanceOfRain
                           .toString()),
                   generateRow(
                       'Daily Chance of Snow %',
-                      model.forecast.forecastday[0].day.dailyChanceOfSnow
+                      model.forecast.forecastday[index].day.dailyChanceOfSnow
                           .toString()),
-                  generateRow('Avg Vis km',
-                      model.forecast.forecastday[0].day.avgvisKm.toString()),
+                  generateRow(
+                      'Avg Vis km',
+                      model.forecast.forecastday[index].day.avgvisKm
+                          .toString()),
                 ],
               ),
             ),
@@ -125,11 +136,11 @@ class DayWeatherPage extends StatelessWidget {
                   crossAxisAlignment: WrapCrossAlignment.start,
                   children: [
                     Text(
-                      model.forecast.forecastday[0].astro.sunrise,
+                      model.forecast.forecastday[index].astro.sunrise,
                       style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      model.forecast.forecastday[0].astro.sunset,
+                      model.forecast.forecastday[index].astro.sunset,
                       style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -149,11 +160,11 @@ class DayWeatherPage extends StatelessWidget {
                   crossAxisAlignment: WrapCrossAlignment.start,
                   children: [
                     Text(
-                      model.forecast.forecastday[0].astro.moonrise,
+                      model.forecast.forecastday[index].astro.moonrise,
                       style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      model.forecast.forecastday[0].astro.moonset,
+                      model.forecast.forecastday[index].astro.moonset,
                       style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],
