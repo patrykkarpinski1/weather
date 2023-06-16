@@ -8,6 +8,8 @@ import 'package:weather/features/home/cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/features/widgets/city_temperature_widget.dart';
 import 'package:weather/features/widgets/navigation_weather_widget.dart';
+import 'package:weather/features/widgets/spinning_sun_widget.dart';
+import 'package:weather/features/widgets/type_writer_text_widget.dart';
 import 'package:weather/model/weather_model.dart';
 
 class HomePage extends StatelessWidget {
@@ -69,7 +71,6 @@ class HomePage extends StatelessWidget {
                   decoration: const BoxDecoration(
                     color: Colors.transparent,
                   ),
-                  width: 150,
                   child: TextButton(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -78,7 +79,7 @@ class HomePage extends StatelessWidget {
                           Text(
                             'City',
                             style: GoogleFonts.asap(
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.black),
                           ),
@@ -87,7 +88,7 @@ class HomePage extends StatelessWidget {
                           Text(
                             weatherModel.location.name,
                             style: GoogleFonts.asap(
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.black),
                           ),
@@ -121,6 +122,16 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 80,
                 ),
+                if (weatherModel == null) ...[
+                  const SpinnignSunWidget(),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Center(
+                    child: TypeWriterTextWidget(
+                        text: 'Find a city to check the weather'),
+                  )
+                ],
                 if (weatherModel != null) ...[
                   CityTemperatureWidget(
                     model: weatherModel,
