@@ -118,58 +118,61 @@ class DayWeatherPage extends StatelessWidget {
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Wrap(
-                  spacing: 10,
-                  direction: Axis.vertical,
-                  crossAxisAlignment: WrapCrossAlignment.start,
-                  children: const [
-                    Text('Sunrise'),
-                    Text('Sunset'),
-                  ],
-                ),
-                Wrap(
-                  spacing: 10,
-                  direction: Axis.vertical,
-                  crossAxisAlignment: WrapCrossAlignment.start,
-                  children: [
-                    Text(
-                      model.forecast.forecastday[index].astro.sunrise,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      model.forecast.forecastday[index].astro.sunset,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                Wrap(
-                  spacing: 10,
-                  direction: Axis.vertical,
-                  crossAxisAlignment: WrapCrossAlignment.start,
-                  children: const [
-                    Text('Moonrise'),
-                    Text('Moonset'),
-                  ],
-                ),
-                Wrap(
-                  spacing: 10,
-                  direction: Axis.vertical,
-                  crossAxisAlignment: WrapCrossAlignment.start,
-                  children: [
-                    Text(
-                      model.forecast.forecastday[index].astro.moonrise,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      model.forecast.forecastday[index].astro.moonset,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Wrap(
+                    spacing: 10,
+                    direction: Axis.vertical,
+                    crossAxisAlignment: WrapCrossAlignment.start,
+                    children: const [
+                      Text('Sunrise'),
+                      Text('Sunset'),
+                    ],
+                  ),
+                  Wrap(
+                    spacing: 10,
+                    direction: Axis.vertical,
+                    crossAxisAlignment: WrapCrossAlignment.start,
+                    children: [
+                      Text(
+                        model.forecast.forecastday[index].astro.sunrise,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        model.forecast.forecastday[index].astro.sunset,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  Wrap(
+                    spacing: 10,
+                    direction: Axis.vertical,
+                    crossAxisAlignment: WrapCrossAlignment.start,
+                    children: const [
+                      Text('Moonrise'),
+                      Text('Moonset'),
+                    ],
+                  ),
+                  Wrap(
+                    spacing: 10,
+                    direction: Axis.vertical,
+                    crossAxisAlignment: WrapCrossAlignment.start,
+                    children: [
+                      Text(
+                        model.forecast.forecastday[index].astro.moonrise,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        model.forecast.forecastday[index].astro.moonset,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
