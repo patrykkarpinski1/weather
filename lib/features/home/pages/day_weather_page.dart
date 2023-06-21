@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:weather/features/widgets/generete_row_widget.dart';
+import 'package:weather/widgets/generete_row_widget.dart';
 import 'package:weather/model/weather_model.dart';
 
 class DayWeatherPage extends StatelessWidget {

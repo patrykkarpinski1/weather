@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:weather/app/core/enums.dart';
-import 'package:weather/features/widgets/actual_weather_widget.dart';
+import 'package:weather/widgets/actual_weather_widget.dart';
 import 'package:weather/features/home/pages/city_page.dart';
 import 'package:weather/features/home/cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather/features/widgets/city_temperature_widget.dart';
-import 'package:weather/features/widgets/navigation_weather_widget.dart';
-import 'package:weather/features/widgets/spinning_sun_widget.dart';
-import 'package:weather/features/widgets/type_writer_text_widget.dart';
+import 'package:weather/widgets/city_temperature_widget.dart';
+import 'package:weather/widgets/navigation_weather_widget.dart';
+import 'package:weather/widgets/spinning_sun_widget.dart';
+import 'package:weather/widgets/type_writer_text_widget.dart';
 import 'package:weather/model/weather_model.dart';
 
 class HomePage extends StatelessWidget {
