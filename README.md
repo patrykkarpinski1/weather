@@ -11,3 +11,5 @@ Flutter app for checking the weather, the app uses the Weather API,
 - Get_it
 - Dio
 - Retrofit
+
+https://github.com/patrykkarpinski1/weather/assets/119192369/84fdc42c-95aa-45e4-8efb-d0ad60ecefc6
